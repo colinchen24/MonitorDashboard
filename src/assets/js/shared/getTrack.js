@@ -32,7 +32,7 @@ $(function() {
 		
 	};
 
-	xmlHttp.open("POST", "http://127.0.0.1:2222/test/gettrack", true); // true for asynchronous 
+	xmlHttp.open("POST", "http://104.225.156.192:2222/test/gettrack", true); // true for asynchronous 
 	xmlHttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 	xmlHttp.send(JSON.stringify({}));
 })
