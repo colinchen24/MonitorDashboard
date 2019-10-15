@@ -70,8 +70,6 @@ $(function() {
 				tr.appendChild(time)
 				document.getElementById('trackData').appendChild(tr)
 				}
-			}
-
 			if(document.getElementById('trackData').innerHTML.split('enabled').length -1 !== number){
 				beep();
 				vnumber ++;
@@ -80,6 +78,8 @@ $(function() {
 			if(vnumber === 5) {
 				vnumber = 0;
 				number = document.getElementById('trackData').innerHTML.split('enabled').length -1;
+			}
+			
 			}
 		};
 
