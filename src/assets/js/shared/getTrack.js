@@ -76,7 +76,7 @@ $(function() {
     					playPromise.then(_ => {
       					// Automatic playback started!
       					// Show playing UI.
-      					snd.pause()
+      					// snd.pause()
     					})
     					.catch(error => {
       					// Auto-play was prevented
