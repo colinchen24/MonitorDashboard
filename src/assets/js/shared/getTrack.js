@@ -42,6 +42,27 @@ $(function() {
 	setInterval(function(){ 
 
 		cnumber = document.getElementById('trackData').innerHTML.split('enabled').length -1;
+		console.log(cnumber + '===' + number)
+		if(cnumber !== number){
+			var playPromise = snd.play();
+			if (playPromise !== undefined) {
+    			playPromise.then(_ => {
+      			// Automatic playback started!
+      			// Show playing UI.
+      			// snd.pause()
+    			})
+    			.catch(error => {
+      			// Auto-play was prevented
+      			// Show paused UI.
+    			});
+  			}
+			vnumber ++;
+		}
+		if(vnumber === 5) {
+			vnumber = 0;
+			number = cnumber;
+		}
+
 		document.getElementById('trackData').innerHTML = "";
 
 		xmlHttp.onreadystatechange = function() {
@@ -67,31 +88,8 @@ $(function() {
 				tr.appendChild(time)
 				document.getElementById('trackData').appendChild(tr)
 				}
-
 			}
 		};
-		console.log(cnumber + '===' + number)
-				if(cnumber !== number){
-					var playPromise = snd.play();
-
-					if (playPromise !== undefined) {
-    					playPromise.then(_ => {
-      					// Automatic playback started!
-      					// Show playing UI.
-      					// snd.pause()
-    					})
-    					.catch(error => {
-      					// Auto-play was prevented
-      					// Show paused UI.
-    					});
-  					}
-					vnumber ++;
-				}
-
-				if(vnumber === 5) {
-					vnumber = 0;
-					number = cnumber;
-				}
 
 		xmlHttp.open("POST", "http://104.225.156.192:2222/test/gettrack", true); // true for asynchronous 
 		xmlHttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
