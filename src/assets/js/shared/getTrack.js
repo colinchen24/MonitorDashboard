@@ -72,6 +72,7 @@ $(function() {
 				document.getElementById('trackData').appendChild(tr)
 				}
 
+				console.log(cnumber + '===' + number)
 				if(cnumber !== number){
 					beep();
 					vnumber ++;
