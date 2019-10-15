@@ -71,8 +71,7 @@ $(function() {
 				tr.appendChild(time)
 				document.getElementById('trackData').appendChild(tr)
 				}
-			setTimeout(function(){ 
-				
+
 				if(cnumber !== number){
 					beep();
 					vnumber ++;
@@ -82,7 +81,6 @@ $(function() {
 					vnumber = 0;
 					number = cnumber;
 				}
-			}, 5000);
 
 			}
 		};
