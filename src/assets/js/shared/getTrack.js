@@ -5,7 +5,7 @@ $(function() {
 	var xmlHttp = new XMLHttpRequest();
 	var number = 0;
 	var vnumber = 0;
-
+	var cnumber = 0;
 	xmlHttp.onreadystatechange = function() {
 		// console.log('xxx')
 		if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
@@ -45,6 +45,7 @@ $(function() {
 
 	setInterval(function(){ 
 
+		cnumber = document.getElementById('trackData').innerHTML.split('enabled').length -1;
 		document.getElementById('trackData').innerHTML = "";
 
 		xmlHttp.onreadystatechange = function() {
@@ -70,16 +71,19 @@ $(function() {
 				tr.appendChild(time)
 				document.getElementById('trackData').appendChild(tr)
 				}
-			if(document.getElementById('trackData').innerHTML.split('enabled').length -1 !== number){
-				beep();
-				vnumber ++;
-			}
-	
-			if(vnumber === 5) {
-				vnumber = 0;
-				number = document.getElementById('trackData').innerHTML.split('enabled').length -1;
-			}
-			
+			setTimeout(function(){ 
+				
+				if(cnumber !== number){
+					beep();
+					vnumber ++;
+				}
+
+				if(vnumber === 5) {
+					vnumber = 0;
+					number = cnumber;
+				}
+			}, 5000);
+
 			}
 		};
 
