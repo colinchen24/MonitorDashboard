@@ -58,7 +58,7 @@ $(function() {
   			}
 			vnumber ++;
 		}
-		if(vnumber === 5) {
+		if(vnumber === 20) {
 			vnumber = 0;
 			number = cnumber;
 		}
