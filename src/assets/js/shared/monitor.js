@@ -29,7 +29,7 @@ $(function() {
 		
 	};
 
-	xmlHttp.open("POST", "http://104.225.156.192:2222/test/getmonitor", true); // true for asynchronous 
+	xmlHttp.open("POST", "http://176.122.147.10:2222/test/getmonitor", true); // true for asynchronous 
 	xmlHttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 	xmlHttp.send(JSON.stringify({}));
 })
