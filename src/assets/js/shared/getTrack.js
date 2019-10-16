@@ -44,18 +44,20 @@ $(function() {
 		cnumber = document.getElementById('trackData').innerHTML.split('enabled').length -1;
 		console.log(cnumber + '===' + number)
 		if(cnumber !== number){
-			var playPromise = snd.play();
-			if (playPromise !== undefined) {
-    			playPromise.then(_ => {
-      			// Automatic playback started!
-      			// Show playing UI.
-      			// snd.pause()
-    			})
-    			.catch(error => {
-      			// Auto-play was prevented
-      			// Show paused UI.
-    			});
-  			}
+			if(vnumber%2 ==0){
+				var playPromise = snd.play();
+				if (playPromise !== undefined) {
+    				playPromise.then(_ => {
+      				// Automatic playback started!
+      				// Show playing UI.
+      				// snd.pause()
+    				})
+    				.catch(error => {
+      				// Auto-play was prevented
+      				// Show paused UI.
+    				});
+  				}	
+			}
 			vnumber ++;
 		}
 		if(vnumber === 20) {
