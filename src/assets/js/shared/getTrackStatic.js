@@ -37,6 +37,6 @@ $(function() {
 
 	xmlHttp.open("POST", "http://176.122.147.10:2222/test/gettrack", true); // true for asynchronous 
 	xmlHttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-	xmlHttp.send(JSON.stringify({}));
+	xmlHttp.send(JSON.stringify({"status":"enabled"}));
 
 })
