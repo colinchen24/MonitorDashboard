@@ -20,7 +20,11 @@ $(function() {
 			var isavailable = document.createElement('td');
 			var time = document.createElement('td');
 			url.innerHTML = tracklist[i].url;
-			size.innerHTML = tracklist[i].size;
+			if(size.length > 10){
+				size.innerHTML = "new updated";	
+			} else{
+				size.innerHTML = tracklist[i].size;
+			}
 			isavailable.innerHTML = tracklist[i].status;
 			time.innerHTML = tracklist[i].time;
 
