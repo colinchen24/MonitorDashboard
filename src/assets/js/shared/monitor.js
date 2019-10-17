@@ -16,7 +16,11 @@ $(function() {
 			var size = document.createElement('td');
 			var frequency = document.createElement('td');
 			url.innerHTML = tracklist[i].url;
-			size.innerHTML = tracklist[i].size;
+			if(size.length > 10){
+				size.innerHTML = "new updated";	
+			} else{
+				size.innerHTML = tracklist[i].size;
+			}
 			frequency.innerHTML = tracklist[i].frequency;
 
 			tr.appendChild(url)
