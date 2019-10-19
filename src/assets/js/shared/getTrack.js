@@ -91,7 +91,7 @@ $(function() {
 			}
 			vnumber ++;
 		}
-		if(vnumber === 20) {
+		if(vnumber > 20) {
 			vnumber = 0;
 			number = formatClist;
 		}
