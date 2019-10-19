@@ -797,6 +797,10 @@
         data.url = document.getElementById("url").value;
         data.size = document.getElementById("size").value;
         data.frequency = document.getElementById("frequency").value;
+        if (data.url.indexOf('\t') !== -1 || data.url.indexOf(' ') !== -1){
+          alert('url有空格或者tab！请去掉.');
+          return;
+        }
         // console.log(data)
         xmlHttp.onreadystatechange = function() {
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
@@ -814,6 +818,10 @@
         var xmlHttp = new XMLHttpRequest();
         data.url = document.getElementById("durl").value;
         data.size = document.getElementById("dsize").value;
+        if (data.url.indexOf('\t') !== -1 || data.url.indexOf(' ') !== -1){
+          alert('url有空格或者tab！请去掉.');
+          return;
+        }
         // console.log(data)
         xmlHttp.onreadystatechange = function() {
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
