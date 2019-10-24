@@ -292,15 +292,19 @@
                           </div>
                           <div class="form-group">
                             <label for="exampleInputPassword1">frequency</label>
-                            <input type="text" class="form-control" id="frequency" placeholder="Enter Time" value="sh">
+                            <input type="text" class="form-control" id="frequency" placeholder="Enter frequency" value="sh">
                           </div>
                           <div class="form-group">
                             <label for="exampleInputPassword1">price</label>
-                            <input type="text" class="form-control" id="price" placeholder="Enter Time" value="99.99">
+                            <input type="text" class="form-control" id="price" placeholder="Enter price" value="99.99">
                           </div>
                           <div class="form-group">
                             <label for="exampleInputPassword1">discount</label>
-                            <input type="text" class="form-control" id="discount" placeholder="Enter Time" value="yes">
+                            <input type="text" class="form-control" id="discount" placeholder="Enter discount" value="yes">
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputPassword1">email</label>
+                            <input type="text" class="form-control" id="email" placeholder="Enter email" value="juga1941427185@163.com">
                           </div>
                           <button id ='submit' class="btn btn-success mr-2">Submit</button>
                           <button class="btn btn-light">Cancel</button>
@@ -807,6 +811,7 @@
         data.frequency = document.getElementById("frequency").value;
         data.price = document.getElementById("price").value;
         data.discount = document.getElementById("discount").value;
+        data.email = document.getElementById("email").value;
         if (data.url.indexOf('\t') !== -1 || data.url.indexOf(' ') !== -1){
           alert('url有空格或者tab！请去掉.');
           return;
