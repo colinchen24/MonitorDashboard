@@ -805,8 +805,8 @@
         data.url = document.getElementById("url").value;
         data.size = document.getElementById("size").value;
         data.frequency = document.getElementById("frequency").value;
-        data.frequency = document.getElementById("price").value;
-        data.frequency = document.getElementById("discount").value;
+        data.price = document.getElementById("price").value;
+        data.discount = document.getElementById("discount").value;
         if (data.url.indexOf('\t') !== -1 || data.url.indexOf(' ') !== -1){
           alert('url有空格或者tab！请去掉.');
           return;
