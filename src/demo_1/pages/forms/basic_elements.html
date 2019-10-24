@@ -280,7 +280,7 @@
                     <div class="card">
                       <div class="card-body">
                         <h4 class="card-title">Add monitor</h4>
-                        <p class="card-description"> input the url/size/time </p>
+                        <p class="card-description"> input the url/size/time/price/discount </p>
                         <div>
                           <div class="form-group">
                             <label for="exampleInputEmail1">Monitor Url</label>
@@ -293,6 +293,14 @@
                           <div class="form-group">
                             <label for="exampleInputPassword1">frequency</label>
                             <input type="text" class="form-control" id="frequency" placeholder="Enter Time" value="sh">
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputPassword1">price</label>
+                            <input type="text" class="form-control" id="price" placeholder="Enter Time" value="99.99">
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputPassword1">discount</label>
+                            <input type="text" class="form-control" id="discount" placeholder="Enter Time" value="yes">
                           </div>
                           <button id ='submit' class="btn btn-success mr-2">Submit</button>
                           <button class="btn btn-light">Cancel</button>
@@ -797,6 +805,8 @@
         data.url = document.getElementById("url").value;
         data.size = document.getElementById("size").value;
         data.frequency = document.getElementById("frequency").value;
+        data.frequency = document.getElementById("price").value;
+        data.frequency = document.getElementById("discount").value;
         if (data.url.indexOf('\t') !== -1 || data.url.indexOf(' ') !== -1){
           alert('url有空格或者tab！请去掉.');
           return;
