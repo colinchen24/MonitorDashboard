@@ -15,6 +15,9 @@ $(function() {
 			var url = document.createElement('td');
 			var size = document.createElement('td');
 			var frequency = document.createElement('td');
+			var discount = document.createElement('td');
+			var price = document.createElement('td');
+			var email = document.createElement('td');
 			url.innerHTML = tracklist[i].url;
 			if(tracklist[i].size.length > 10){
 				size.innerHTML = "new updated";	
@@ -22,10 +25,16 @@ $(function() {
 				size.innerHTML = tracklist[i].size;
 			}
 			frequency.innerHTML = tracklist[i].frequency;
+			discount.innerHTML = tracklist[i].discount;
+			price.innerHTML = tracklist[i].price;
+			email.innerHTML = tracklist[i].email;
 
 			tr.appendChild(url)
 			tr.appendChild(size)
 			tr.appendChild(frequency)
+			tr.appendChild(discount)
+			tr.appendChild(price)
+			tr.appendChild(email)
 			document.getElementById('trackData').appendChild(tr)
 		}
 		
