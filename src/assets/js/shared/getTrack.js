@@ -67,10 +67,13 @@ $(function() {
 
 	setInterval(function(){ 
 
-		cnumber = document.getElementById('trackData').innerHTML.split('</td><td>2019');
+		cnumber = document.getElementById('trackData').innerHTML.split('2019');
 		formatClist = [];
 		for (var j =0; j< cnumber.length -1 ; j++){
-			formatClist.push(cnumber[j].split('<tr><td>https://')[1].split('</td><td>enabl')[0]);
+			if(cnumber[j].indexOf('https') !== -1){
+				formatClist.push(cnumber[j].split('<tr><td>https://')[1].split('</td><td>enabl')[0]);	
+			}
+			
 		}
 
 		// console.log(formatClist);
