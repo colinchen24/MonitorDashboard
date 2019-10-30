@@ -19,7 +19,7 @@ $(function() {
 			var price = document.createElement('td');
 			var email = document.createElement('td');
 			url.innerHTML = tracklist[i].url;
-			if(tracklist[i].size.length > 10){
+			if(tracklist[i].size && tracklist[i].size.length > 10){
 				size.innerHTML = "new updated";	
 			} else{
 				size.innerHTML = tracklist[i].size;
