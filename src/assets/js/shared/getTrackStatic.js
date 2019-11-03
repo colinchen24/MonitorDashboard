@@ -38,8 +38,8 @@ $(function() {
 	}
 		
 	};
-
-	xmlHttp.open("POST", "http://176.122.147.10:2222/test/gettrack", true); // true for asynchronous 
+	// xmlHttp.open("POST", "https://127.0.0.1:2222/test/gettrack", true); // true for asynchronous 
+	xmlHttp.open("POST", "https://176.122.147.10:2222/test/gettrack", true); // true for asynchronous 
 	xmlHttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 	xmlHttp.send(JSON.stringify({"status":"enabled"}));
 
