@@ -113,9 +113,15 @@ $(function() {
 				var size = document.createElement('td');
 				var isavailable = document.createElement('td');
 				var time = document.createElement('td');
-				url.innerHTML = tracklist[i].url;
+
+				if(tracklist[i].url.indexOf("https") === -1){
+					url.innerHTML = 'https://www.nike.com/cn/w?q=' + tracklist[i].url;
+				} else{
+					url.innerHTML = tracklist[i].url;	
+				}
 				
-				if(tracklist[i].size.length > 10){
+				
+				if(tracklist[i].size && tracklist[i].size.length > 10){
 					size.innerHTML = "new updated";	
 				} else{
 					size.innerHTML = tracklist[i].size;
